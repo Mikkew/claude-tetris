@@ -68,6 +68,15 @@ jobs:
                - ### Criterios de aceptación (lista de verificación)
                - ### Preguntas abiertas (si falta información; si no, indica "Ninguna")
                No incluyas un título principal; el workflow agrega el encabezado.
+
+            Formato del diagnóstico:
+            - Todo el contenido de `triage/diagnosis.md` se publica tal cual como comentario
+              en GitHub, así que debe ser Markdown válido compatible con GitHub (GFM).
+            - Usa encabezados `###`, listas con `-`, listas de verificación con `- [ ]`,
+              tablas GFM si ayudan, y `código inline` para nombres de archivos, funciones y variables.
+            - Usa bloques de código con triple backtick e indica el lenguaje (```js, ```css, ```html).
+            - Deja una línea en blanco antes y después de encabezados, listas y bloques de código.
+            - No envuelvas el archivo completo en un bloque de código ni uses HTML innecesario.
           claude_args: |
             --allowedTools "Read,Glob,Grep,Write,Bash(gh issue view:*),Bash(gh label list:*)"
 
