@@ -239,3 +239,131 @@ kbd {
 #restart-btn:hover {
   background: var(--restart-hover);
 }
+
+/* ---- Récords ---- */
+.records-section {
+  gap: 8px;
+}
+
+.highscore-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 12px;
+  color: var(--text-color);
+}
+
+.highscore-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.highscore-empty {
+  color: var(--label-color);
+  font-style: italic;
+  font-size: 11px;
+}
+
+.highscore-new {
+  color: var(--value-color);
+  font-weight: 700;
+  animation: highscore-pulse 1s ease-in-out infinite alternate;
+}
+
+@keyframes highscore-pulse {
+  from { opacity: 1; }
+  to { opacity: 0.45; }
+}
+
+.highscore-stats {
+  font-size: 10px;
+  color: var(--controls-color);
+  letter-spacing: 0.5px;
+}
+
+.reset-records-btn {
+  align-self: flex-start;
+  background: transparent;
+  border: 1px solid var(--kbd-border);
+  color: var(--controls-color);
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 10px;
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.reset-records-btn:hover {
+  border-color: var(--title-color);
+  color: var(--title-color);
+}
+
+.overlay-records {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: center;
+}
+
+.records-title {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: var(--label-color);
+  font-weight: 600;
+}
+
+.overlay-records .highscore-list {
+  width: 100%;
+  max-width: 220px;
+}
+
+.highscore-entry {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  width: 100%;
+}
+
+.highscore-entry.hidden {
+  display: none;
+}
+
+.highscore-entry label {
+  font-size: 12px;
+  color: var(--overlay-score-color);
+  text-align: center;
+}
+
+#player-name {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 14px;
+  padding: 6px 10px;
+  border-radius: 4px;
+  border: 1px solid var(--kbd-border);
+  background: var(--kbd-bg);
+  color: var(--text-color);
+  text-align: center;
+  width: 140px;
+}
+
+#save-score-btn {
+  background: var(--restart-bg);
+  color: var(--restart-color);
+  border: none;
+  border-radius: 6px;
+  padding: 6px 20px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: background 0.15s;
+}
+
+#save-score-btn:hover {
+  background: var(--restart-hover);
+}

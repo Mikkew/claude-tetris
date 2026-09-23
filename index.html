@@ -35,6 +35,13 @@
           <span class="value" id="level">1</span>
         </div>
 
+        <div class="panel-section records-section">
+          <span class="label">RECORDS</span>
+          <ol id="sidebar-highscore-list" class="highscore-list"></ol>
+          <p id="sidebar-highscore-stats" class="highscore-stats"></p>
+          <button id="reset-records-btn" class="reset-records-btn" type="button">Resetear records</button>
+        </div>
+
         <div class="panel-section">
           <span class="label">NEXT</span>
           <canvas id="next-canvas" width="120" height="120"></canvas>
@@ -57,6 +64,19 @@
       <div class="overlay-box">
         <p id="overlay-title">GAME OVER</p>
         <p id="overlay-score"></p>
+
+        <div id="highscore-entry" class="highscore-entry hidden">
+          <label for="player-name">¡Nuevo récord! Introduce tu nombre:</label>
+          <input type="text" id="player-name" maxlength="12" autocomplete="off" />
+          <button id="save-score-btn" type="button">Guardar</button>
+        </div>
+
+        <div class="overlay-records">
+          <p class="records-title">RÉCORDS</p>
+          <ol id="overlay-highscore-list" class="highscore-list"></ol>
+          <p id="overlay-highscore-stats" class="highscore-stats"></p>
+        </div>
+
         <button id="restart-btn">Reiniciar</button>
       </div>
     </div>
