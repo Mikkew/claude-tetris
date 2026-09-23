@@ -44,6 +44,16 @@
   --restart-hover: #5c7ce0;
 }
 
+/* Neon skin overrides the board background regardless of light/dark theme.
+   The extra `html` type selector raises specificity above the
+   `:root[data-theme="..."]` rules above so this wins independent of
+   source order, even if more theme rules are added later. */
+html:root[data-skin="neon"] {
+  --board-bg: #000000;
+  --board-border: #0a0a0a;
+  --grid-color: #111111;
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -104,6 +114,28 @@ body {
 }
 
 .theme-toggle:focus-visible {
+  outline: 2px solid var(--title-color);
+  outline-offset: 2px;
+}
+
+.skin-select {
+  height: 36px;
+  padding: 0 8px;
+  background: var(--kbd-bg);
+  border: 1px solid var(--kbd-border);
+  border-radius: 6px;
+  color: var(--text-color);
+  font-size: 13px;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.skin-select:hover {
+  border-color: var(--title-color);
+}
+
+.skin-select:focus-visible {
   outline: 2px solid var(--title-color);
   outline-offset: 2px;
 }
